@@ -1,0 +1,175 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     bigdata-change4-normalized - bigdata-change4-normalized-weka.filters.unsupervised.attribute.Reorder-R1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,60-weka.filters.unsupervised.attribute.Discretize-B3-M-1.0-R117-precision6-unset-class-temporarily-weka.filters.unsupervised.attribute.Remove-R3-33,35-50,52-59-weka.filters.unsupervised.attribute.Remove-R1-2-weka.filters.unsupervised.attribute.Remove-R1-2,5-6,9-19,21-30,32,34-38,40-43,45-51,53-59-weka.filters.unsupervised.attribute.RenameNominalValues-R11-N(-inf-0.980205]:low,(0.982025-1.960411]:medium,(1.960411-inf):high-weka.filters.unsupervised.attribute.RenameNominalValues-R11-N(-inf-0.980205]:low, (0.982025-1.960411]:medium, (1.960411-inf):high-I-weka.filters.unsupervised.attribute.RenameNominalValues-R11-N'(-inf-0.980205]':low, '(0.982025-1.960411]':medium, '(1.960411-inf)':high-I-weka.filters.unsupervised.attribute.RenameNominalValues-R11-N'(-inf-0.980205]':low, '(0.980205-1.960411]':medium, '(1.960411-inf)':high-I
+Instances:    2096
+Attributes:   11
+              lat_dd
+              lon_dd
+              ntl
+              ptl
+              atmo_pdep_2002
+              n_human_waste_2007
+              n_livestock.waste_2007
+              p_livestock_waste_2007
+              p_human_waste_kg_2007
+              runoffws
+              logchl_A
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+ptl <= 0.320306
+|   lat_dd <= 0.456541
+|   |   n_livestock.waste_2007 <= 0.335696
+|   |   |   ntl <= 0.416446: low (28.0)
+|   |   |   ntl > 0.416446
+|   |   |   |   runoffws <= 0.772722: low (38.0/6.0)
+|   |   |   |   runoffws > 0.772722: medium (3.0)
+|   |   n_livestock.waste_2007 > 0.335696
+|   |   |   lon_dd <= 0.750912: low (38.0/18.0)
+|   |   |   lon_dd > 0.750912: medium (5.0)
+|   lat_dd > 0.456541: low (703.0/57.0)
+ptl > 0.320306
+|   ntl <= 0.632499
+|   |   ntl <= 0.467911
+|   |   |   lat_dd <= 0.725456
+|   |   |   |   runoffws <= 0.715514: low (61.0/16.0)
+|   |   |   |   runoffws > 0.715514
+|   |   |   |   |   ptl <= 0.361355
+|   |   |   |   |   |   n_livestock.waste_2007 <= 0.145687
+|   |   |   |   |   |   |   runoffws <= 0.785036: medium (9.0/1.0)
+|   |   |   |   |   |   |   runoffws > 0.785036: low (4.0)
+|   |   |   |   |   |   n_livestock.waste_2007 > 0.145687: low (8.0)
+|   |   |   |   |   ptl > 0.361355: medium (24.0/3.0)
+|   |   |   lat_dd > 0.725456: low (48.0/1.0)
+|   |   ntl > 0.467911
+|   |   |   lon_dd <= 0.476603
+|   |   |   |   ptl <= 0.431805
+|   |   |   |   |   ptl <= 0.325568: low (5.0/1.0)
+|   |   |   |   |   ptl > 0.325568
+|   |   |   |   |   |   lon_dd <= 0.133606
+|   |   |   |   |   |   |   atmo_pdep_2002 <= -1.667399: low (4.0/1.0)
+|   |   |   |   |   |   |   atmo_pdep_2002 > -1.667399
+|   |   |   |   |   |   |   |   runoffws <= 0.852595: medium (11.0)
+|   |   |   |   |   |   |   |   runoffws > 0.852595: low (3.0/1.0)
+|   |   |   |   |   |   lon_dd > 0.133606
+|   |   |   |   |   |   |   lon_dd <= 0.339658: low (37.0/4.0)
+|   |   |   |   |   |   |   lon_dd > 0.339658
+|   |   |   |   |   |   |   |   lon_dd <= 0.468192: medium (28.0/10.0)
+|   |   |   |   |   |   |   |   lon_dd > 0.468192: low (6.0)
+|   |   |   |   ptl > 0.431805
+|   |   |   |   |   lat_dd <= 0.544293: medium (66.0/10.0)
+|   |   |   |   |   lat_dd > 0.544293
+|   |   |   |   |   |   n_human_waste_2007 <= 0.000029
+|   |   |   |   |   |   |   ptl <= 0.635127
+|   |   |   |   |   |   |   |   p_livestock_waste_2007 <= -0.865039
+|   |   |   |   |   |   |   |   |   ptl <= 0.473878
+|   |   |   |   |   |   |   |   |   |   lon_dd <= 0.329276
+|   |   |   |   |   |   |   |   |   |   |   lat_dd <= 0.826135: low (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   lat_dd > 0.826135: medium (3.0)
+|   |   |   |   |   |   |   |   |   |   lon_dd > 0.329276: low (4.0)
+|   |   |   |   |   |   |   |   |   ptl > 0.473878: medium (9.0)
+|   |   |   |   |   |   |   |   p_livestock_waste_2007 > -0.865039: low (7.0/2.0)
+|   |   |   |   |   |   |   ptl > 0.635127
+|   |   |   |   |   |   |   |   runoffws <= 0.530869: low (5.0)
+|   |   |   |   |   |   |   |   runoffws > 0.530869: high (3.0/1.0)
+|   |   |   |   |   |   n_human_waste_2007 > 0.000029
+|   |   |   |   |   |   |   lon_dd <= 0.153825
+|   |   |   |   |   |   |   |   lat_dd <= 0.689139: low (9.0)
+|   |   |   |   |   |   |   |   lat_dd > 0.689139
+|   |   |   |   |   |   |   |   |   p_livestock_waste_2007 <= -0.591153
+|   |   |   |   |   |   |   |   |   |   lon_dd <= 0.089179: low (7.0)
+|   |   |   |   |   |   |   |   |   |   lon_dd > 0.089179
+|   |   |   |   |   |   |   |   |   |   |   ntl <= 0.558995: low (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   ntl > 0.558995: medium (3.0)
+|   |   |   |   |   |   |   |   |   p_livestock_waste_2007 > -0.591153: medium (4.0)
+|   |   |   |   |   |   |   lon_dd > 0.153825
+|   |   |   |   |   |   |   |   lat_dd <= 0.87148: medium (54.0/9.0)
+|   |   |   |   |   |   |   |   lat_dd > 0.87148: low (21.0/9.0)
+|   |   |   lon_dd > 0.476603: medium (530.0/94.0)
+|   ntl > 0.632499
+|   |   ptl <= 0.560754
+|   |   |   p_human_waste_kg_2007 <= -0.332574
+|   |   |   |   ptl <= 0.434047: low (8.0/1.0)
+|   |   |   |   ptl > 0.434047
+|   |   |   |   |   ntl <= 0.633762: low (2.0/1.0)
+|   |   |   |   |   ntl > 0.633762
+|   |   |   |   |   |   p_human_waste_kg_2007 <= -0.540607: medium (26.0/1.0)
+|   |   |   |   |   |   p_human_waste_kg_2007 > -0.540607
+|   |   |   |   |   |   |   p_livestock_waste_2007 <= 0.021621: low (5.0)
+|   |   |   |   |   |   |   p_livestock_waste_2007 > 0.021621
+|   |   |   |   |   |   |   |   atmo_pdep_2002 <= -0.933092
+|   |   |   |   |   |   |   |   |   lat_dd <= 0.911855: low (2.0)
+|   |   |   |   |   |   |   |   |   lat_dd > 0.911855: medium (2.0)
+|   |   |   |   |   |   |   |   atmo_pdep_2002 > -0.933092: medium (9.0)
+|   |   |   p_human_waste_kg_2007 > -0.332574
+|   |   |   |   ptl <= 0.508073: medium (19.0/1.0)
+|   |   |   |   ptl > 0.508073
+|   |   |   |   |   ntl <= 0.682914
+|   |   |   |   |   |   ptl <= 0.54671: high (5.0)
+|   |   |   |   |   |   ptl > 0.54671: medium (2.0)
+|   |   |   |   |   ntl > 0.682914: medium (4.0)
+|   |   ptl > 0.560754
+|   |   |   ntl <= 0.6895
+|   |   |   |   runoffws <= 0.341639
+|   |   |   |   |   lat_dd <= 0.994044
+|   |   |   |   |   |   ptl <= 0.613296
+|   |   |   |   |   |   |   lon_dd <= 0.435551: low (2.0)
+|   |   |   |   |   |   |   lon_dd > 0.435551: medium (3.0)
+|   |   |   |   |   |   ptl > 0.613296: medium (13.0)
+|   |   |   |   |   lat_dd > 0.994044: low (2.0)
+|   |   |   |   runoffws > 0.341639
+|   |   |   |   |   ptl <= 0.744943
+|   |   |   |   |   |   lat_dd <= 0.804559: high (52.0/21.0)
+|   |   |   |   |   |   lat_dd > 0.804559
+|   |   |   |   |   |   |   atmo_pdep_2002 <= -0.070742
+|   |   |   |   |   |   |   |   runoffws <= 0.352101: low (2.0/1.0)
+|   |   |   |   |   |   |   |   runoffws > 0.352101: medium (11.0/2.0)
+|   |   |   |   |   |   |   atmo_pdep_2002 > -0.070742: low (2.0/1.0)
+|   |   |   |   |   ptl > 0.744943
+|   |   |   |   |   |   runoffws <= 0.394633: medium (4.0/1.0)
+|   |   |   |   |   |   runoffws > 0.394633: low (8.0/1.0)
+|   |   |   ntl > 0.6895
+|   |   |   |   atmo_pdep_2002 <= -1.371216
+|   |   |   |   |   lon_dd <= 0.257494: medium (2.0/1.0)
+|   |   |   |   |   lon_dd > 0.257494: low (5.0/1.0)
+|   |   |   |   atmo_pdep_2002 > -1.371216: high (112.0/28.0)
+
+Number of Leaves  : 	59
+
+Size of the tree : 	117
+
+
+Time taken to build model: 0.08 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        1588               75.7634 %
+Incorrectly Classified Instances       508               24.2366 %
+Kappa statistic                          0.5645
+Mean absolute error                      0.2041
+Root mean squared error                  0.3612
+Relative absolute error                 54.5893 %
+Root relative squared error             83.5475 %
+Total Number of Instances             2096     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.835    0.230    0.791      0.835    0.812      0.606    0.836     0.782     low
+                 0.693    0.178    0.735      0.693    0.713      0.520    0.784     0.676     medium
+                 0.588    0.028    0.625      0.588    0.606      0.576    0.858     0.481     high
+Weighted Avg.    0.758    0.194    0.756      0.758    0.756      0.568    0.816     0.716     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 893 166  11 |   a = low
+ 225 605  43 |   b = medium
+  11  52  90 |   c = high
+

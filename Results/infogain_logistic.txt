@@ -1,0 +1,81 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation:     bigdata-change4-normalized - bigdata-change4-normalized-weka.filters.unsupervised.attribute.Reorder-R1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,60-weka.filters.unsupervised.attribute.Discretize-B3-M-1.0-R117-precision6-unset-class-temporarily-weka.filters.unsupervised.attribute.Remove-R3-33,35-50,52-59-weka.filters.unsupervised.attribute.Remove-R1-2-weka.filters.unsupervised.attribute.Remove-R1-3,5-6,10-12,14-17,20-56,58-weka.filters.unsupervised.attribute.RenameNominalValues-R10-N'(-inf-0.980205]':low, '(0.980205-1.960411]':medium, '(1.960411-inf)':high-I
+Instances:    2096
+Attributes:   10
+              lon_dd
+              ntl
+              ptl
+              snow_yrmean
+              lst_yrmean
+              tmean
+              tmean_yrmean
+              agkffactws
+              depth
+              logchl_A
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Logistic Regression with ridge parameter of 1.0E-8
+Coefficients...
+                   Class
+Variable             low    medium
+==================================
+lon_dd            -1.566   -0.6602
+ntl             -23.6516   -17.339
+ptl             -13.2057   -5.2715
+snow_yrmean        -1.05   -1.1777
+lst_yrmean        1.0958    0.4516
+tmean            -0.5268   -0.4116
+tmean_yrmean     -2.5545   -1.2831
+agkffactws       -0.3168   -0.0135
+depth            -1.1045   -0.4757
+Intercept        24.2705   17.0119
+
+
+Odds Ratios...
+                   Class
+Variable             low    medium
+==================================
+lon_dd            0.2089    0.5168
+ntl                    0         0
+ptl                    0    0.0051
+snow_yrmean         0.35     0.308
+lst_yrmean        2.9915    1.5708
+tmean             0.5905    0.6626
+tmean_yrmean      0.0777    0.2772
+agkffactws        0.7285    0.9866
+depth             0.3314    0.6215
+
+
+Time taken to build model: 0.03 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        1637               78.1011 %
+Incorrectly Classified Instances       459               21.8989 %
+Kappa statistic                          0.6019
+Mean absolute error                      0.2213
+Root mean squared error                  0.3286
+Relative absolute error                 59.1931 %
+Root relative squared error             76.0223 %
+Total Number of Instances             2096     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.845    0.188    0.824      0.845    0.834      0.657    0.893     0.899     low
+                 0.759    0.196    0.734      0.759    0.747      0.561    0.851     0.769     medium
+                 0.458    0.013    0.729      0.458    0.562      0.553    0.948     0.635     high
+Weighted Avg.    0.781    0.179    0.780      0.781    0.778      0.609    0.879     0.826     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 904 161   5 |   a = low
+ 189 663  21 |   b = medium
+   4  79  70 |   c = high
+

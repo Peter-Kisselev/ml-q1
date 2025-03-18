@@ -1,0 +1,125 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     AT: bigdata-change4-normalized - bigdata-change4-normalized-weka.filters.unsupervised.attribute.Reorder-R1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,60-weka.filters.unsupervised.attribute.Discretize-B3-M-1.0-R117-precision6-unset-class-temporarily-weka.filters.unsupervised.attribute.Remove-R3-33,35-50,52-59-weka.filters.unsupervised.attribute.Remove-R1-2-weka.filters.unsupervised.attribute.ReplaceMissingValues-weka.filters.unsupervised.attribute.NominalToBinary-Rfirst-last-weka.filters.unsupervised.attribute.Remove-R60-weka.filters.unsupervised.attribute.Standardize_principal components-weka.filters.unsupervised.attribute.Remove-R12-28-weka.filters.unsupervised.attribute.RenameNominalValues-R11-N'(-inf-0.980205]':low, '(0.980205-1.960411]':medium, '(1.960411-inf)':high-I-weka.filters.unsupervised.attribute.RenameNominalValues-R12-N'(-inf-0.980205]':low, '(0.980205-1.960411]':medium, '(1.960411-inf)':high-I
+Instances:    2096
+Attributes:   12
+              -0.213total input-0.213nani-0.211p_accumulated_ag_inputs_2007-0.211n_livestock_food_demand_2007-0.209n_livestock.waste_2007...
+              -0.241n_human_waste_2007-0.239human_n_demand_2007-0.239p_human_waste_kg_2007-0.237p_human_food_demand_kg_2007-0.227n_fert_urban_2007...
+              0.307lst+0.271lst_yrmean-0.247npp-0.216omws-0.191lat_dd...
+              -0.252lat_dd+0.224atmo_pdep_2002+0.215atmo_pdep_2007-0.211p_human_food_demand_kg_2007-0.207p_human_nonfood_demand_kg_2007...
+              0.41 wetlands+0.349pctwdwet2011ws+0.314pcthbwet2011ws-0.29depth+0.225ntl...
+              0.284ntl-0.254depth+0.249ptl-0.223napi+0.218n_rock_2007...
+              0.536wsarea_km2+0.51 lake_area_ha+0.237depth-0.21runoffws-0.208npp_yrmean...
+              0.368lake_area_ha+0.346wsarea_km2-0.292sandws-0.255atmo_pdep_2007+0.255npp...
+              -0.469fire_yrmean-0.42fire-0.339p_f_fertilizer_2007-0.246p2o5ws+0.208wsarea_km2...
+              0.328napi+0.321precip-0.265n_cbnf_2007+0.25 ptl-0.246bfiws...
+              0.524n_rock_2007+0.499damdensws+0.257fire-0.24omws+0.196fire_yrmean...
+              logchl_A
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                                                                                                                                            Class
+Attribute                                                                                                                                     low  medium    high
+                                                                                                                                           (0.51)  (0.42)  (0.07)
+==================================================================================================================================================================
+-0.213total input-0.213nani-0.211p_accumulated_ag_inputs_2007-0.211n_livestock_food_demand_2007-0.209n_livestock.waste_2007...
+  mean                                                                                                                                      1.6767 -1.6749 -2.1697
+  std. dev.                                                                                                                                 3.8059  3.5718  3.7655
+  weight sum                                                                                                                                  1070     873     153
+  precision                                                                                                                                 0.0123  0.0123  0.0123
+
+-0.241n_human_waste_2007-0.239human_n_demand_2007-0.239p_human_waste_kg_2007-0.237p_human_food_demand_kg_2007-0.227n_fert_urban_2007...
+  mean                                                                                                                                     -0.4002  0.2292  1.4906
+  std. dev.                                                                                                                                  2.759  3.0156  3.0562
+  weight sum                                                                                                                                  1070     873     153
+  precision                                                                                                                                 0.0091  0.0091  0.0091
+
+0.307lst+0.271lst_yrmean-0.247npp-0.216omws-0.191lat_dd...
+  mean                                                                                                                                     -0.4733  0.4172  0.9287
+  std. dev.                                                                                                                                  2.398  2.2513  2.1963
+  weight sum                                                                                                                                  1070     873     153
+  precision                                                                                                                                  0.008   0.008   0.008
+
+-0.252lat_dd+0.224atmo_pdep_2002+0.215atmo_pdep_2007-0.211p_human_food_demand_kg_2007-0.207p_human_nonfood_demand_kg_2007...
+  mean                                                                                                                                     -0.0109  0.1245 -0.6345
+  std. dev.                                                                                                                                 1.8514  2.0693  1.7686
+  weight sum                                                                                                                                  1070     873     153
+  precision                                                                                                                                 0.0079  0.0079  0.0079
+
+0.41 wetlands+0.349pctwdwet2011ws+0.314pcthbwet2011ws-0.29depth+0.225ntl...
+  mean                                                                                                                                     -0.3935  0.3059  1.0061
+  std. dev.                                                                                                                                 1.5459  1.6984   1.828
+  weight sum                                                                                                                                  1070     873     153
+  precision                                                                                                                                 0.0065  0.0065  0.0065
+
+0.284ntl-0.254depth+0.249ptl-0.223napi+0.218n_rock_2007...
+  mean                                                                                                                                     -0.2884  0.1773  1.0044
+  std. dev.                                                                                                                                 1.3363  1.5692  1.4912
+  weight sum                                                                                                                                  1070     873     153
+  precision                                                                                                                                 0.0059  0.0059  0.0059
+
+0.536wsarea_km2+0.51 lake_area_ha+0.237depth-0.21runoffws-0.208npp_yrmean...
+  mean                                                                                                                                      0.0048 -0.0031 -0.0152
+  std. dev.                                                                                                                                 1.4249  1.0326  0.7334
+  weight sum                                                                                                                                  1070     873     153
+  precision                                                                                                                                 0.0117  0.0117  0.0117
+
+0.368lake_area_ha+0.346wsarea_km2-0.292sandws-0.255atmo_pdep_2007+0.255npp...
+  mean                                                                                                                                     -0.0626  0.0862 -0.0561
+  std. dev.                                                                                                                                 1.2435  1.1212  1.0674
+  weight sum                                                                                                                                  1070     873     153
+  precision                                                                                                                                 0.0091  0.0091  0.0091
+
+-0.469fire_yrmean-0.42fire-0.339p_f_fertilizer_2007-0.246p2o5ws+0.208wsarea_km2...
+  mean                                                                                                                                      0.0677 -0.0568 -0.1493
+  std. dev.                                                                                                                                 1.0654  1.2505  1.1521
+  weight sum                                                                                                                                  1070     873     153
+  precision                                                                                                                                 0.0085  0.0085  0.0085
+
+0.328napi+0.321precip-0.265n_cbnf_2007+0.25 ptl-0.246bfiws...
+  mean                                                                                                                                     -0.2063  0.1492  0.5924
+  std. dev.                                                                                                                                 1.0423  1.0539  1.0912
+  weight sum                                                                                                                                  1070     873     153
+  precision                                                                                                                                 0.0056  0.0056  0.0056
+
+0.524n_rock_2007+0.499damdensws+0.257fire-0.24omws+0.196fire_yrmean...
+  mean                                                                                                                                     -0.0615  0.0303  0.2571
+  std. dev.                                                                                                                                 1.0547  1.0549   0.842
+  weight sum                                                                                                                                  1070     873     153
+  precision                                                                                                                                 0.0046  0.0046  0.0046
+
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        1455               69.4179 %
+Incorrectly Classified Instances       641               30.5821 %
+Kappa statistic                          0.442 
+Mean absolute error                      0.2808
+Root mean squared error                  0.3792
+Relative absolute error                 75.1019 %
+Root relative squared error             87.7266 %
+Total Number of Instances             2096     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.726    0.212    0.782      0.726    0.753      0.515    0.822     0.819     low
+                 0.740    0.327    0.618      0.740    0.673      0.407    0.750     0.612     medium
+                 0.209    0.012    0.571      0.209    0.306      0.317    0.844     0.350     high
+Weighted Avg.    0.694    0.245    0.698      0.694    0.687      0.456    0.794     0.699     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 777 285   8 |   a = low
+ 211 646  16 |   b = medium
+   6 115  32 |   c = high
+

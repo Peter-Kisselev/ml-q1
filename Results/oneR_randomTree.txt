@@ -1,0 +1,876 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     bigdata-change4-normalized - bigdata-change4-normalized-weka.filters.unsupervised.attribute.Reorder-R1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,60-weka.filters.unsupervised.attribute.Discretize-B3-M-1.0-R117-precision6-unset-class-temporarily-weka.filters.unsupervised.attribute.Remove-R3-33,35-50,52-59-weka.filters.unsupervised.attribute.Remove-R1-2-weka.filters.unsupervised.attribute.Remove-R1-3,5-6,9-19,21-27,29-35,37-44,46-55,58-59-weka.filters.unsupervised.attribute.RenameNominalValues-R10-N'(-inf-0.980205]':low, '(0.980205-1.960411]':medium, '(1.960411-inf)':high-I
+Instances:    2096
+Attributes:   10
+              lon_dd
+              ntl
+              ptl
+              atmo_pdep_2002
+              n_fert_farm_2007
+              p_crop_removal_2007
+              p_accumulated_ag_inputs_2007
+              bfiws
+              agkffactws
+              logchl_A
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+
+RandomTree
+==========
+
+n_fert_farm_2007 < -0.08
+|   ptl < 0.35
+|   |   ptl < 0.27
+|   |   |   p_accumulated_ag_inputs_2007 < -0.62
+|   |   |   |   ptl < 0.26
+|   |   |   |   |   bfiws < 0.7
+|   |   |   |   |   |   bfiws < 0.69
+|   |   |   |   |   |   |   lon_dd < 0.74 : low (19/0)
+|   |   |   |   |   |   |   lon_dd >= 0.74
+|   |   |   |   |   |   |   |   ntl < 0.39 : medium (1/0)
+|   |   |   |   |   |   |   |   ntl >= 0.39 : low (1/0)
+|   |   |   |   |   |   bfiws >= 0.69 : medium (1/0)
+|   |   |   |   |   bfiws >= 0.7
+|   |   |   |   |   |   atmo_pdep_2002 < -0.84
+|   |   |   |   |   |   |   bfiws < 0.88
+|   |   |   |   |   |   |   |   ntl < 0.5
+|   |   |   |   |   |   |   |   |   ntl < 0.36
+|   |   |   |   |   |   |   |   |   |   ntl < 0.36 : low (18/0)
+|   |   |   |   |   |   |   |   |   |   ntl >= 0.36 : medium (1/0)
+|   |   |   |   |   |   |   |   |   ntl >= 0.36 : low (25/0)
+|   |   |   |   |   |   |   |   ntl >= 0.5
+|   |   |   |   |   |   |   |   |   ptl < 0.19 : medium (1/0)
+|   |   |   |   |   |   |   |   |   ptl >= 0.19 : low (1/0)
+|   |   |   |   |   |   |   bfiws >= 0.88 : low (52/0)
+|   |   |   |   |   |   atmo_pdep_2002 >= -0.84 : low (154/0)
+|   |   |   |   ptl >= 0.26
+|   |   |   |   |   lon_dd < 0.94
+|   |   |   |   |   |   bfiws < 0.86 : low (8/0)
+|   |   |   |   |   |   bfiws >= 0.86
+|   |   |   |   |   |   |   ntl < 0.46 : low (3/0)
+|   |   |   |   |   |   |   ntl >= 0.46 : medium (1/0)
+|   |   |   |   |   lon_dd >= 0.94 : medium (1/0)
+|   |   |   p_accumulated_ag_inputs_2007 >= -0.62
+|   |   |   |   ntl < 0.42
+|   |   |   |   |   agkffactws < 0
+|   |   |   |   |   |   n_fert_farm_2007 < -0.99 : medium (1/0)
+|   |   |   |   |   |   n_fert_farm_2007 >= -0.99 : low (3/0)
+|   |   |   |   |   agkffactws >= 0 : low (60/0)
+|   |   |   |   ntl >= 0.42
+|   |   |   |   |   ptl < 0.23
+|   |   |   |   |   |   bfiws < 0.54 : medium (1/0)
+|   |   |   |   |   |   bfiws >= 0.54
+|   |   |   |   |   |   |   bfiws < 0.9 : low (31/0)
+|   |   |   |   |   |   |   bfiws >= 0.9
+|   |   |   |   |   |   |   |   n_fert_farm_2007 < -0.65
+|   |   |   |   |   |   |   |   |   ptl < 0.16 : medium (1/0)
+|   |   |   |   |   |   |   |   |   ptl >= 0.16 : low (1/0)
+|   |   |   |   |   |   |   |   n_fert_farm_2007 >= -0.65 : low (4/0)
+|   |   |   |   |   ptl >= 0.23
+|   |   |   |   |   |   ntl < 0.5
+|   |   |   |   |   |   |   ptl < 0.25
+|   |   |   |   |   |   |   |   n_fert_farm_2007 < -0.16
+|   |   |   |   |   |   |   |   |   atmo_pdep_2002 < 0.23
+|   |   |   |   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 < 0.09 : medium (1/0)
+|   |   |   |   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 >= 0.09
+|   |   |   |   |   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 < 0.86 : low (3/0)
+|   |   |   |   |   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 >= 0.86 : medium (1/0)
+|   |   |   |   |   |   |   |   |   atmo_pdep_2002 >= 0.23 : medium (2/0)
+|   |   |   |   |   |   |   |   n_fert_farm_2007 >= -0.16 : low (3/0)
+|   |   |   |   |   |   |   ptl >= 0.25 : low (8/0)
+|   |   |   |   |   |   ntl >= 0.5 : medium (3/0)
+|   |   ptl >= 0.27
+|   |   |   ntl < 0.44
+|   |   |   |   ntl < 0.23
+|   |   |   |   |   ntl < 0.22
+|   |   |   |   |   |   agkffactws < 0 : low (4/0)
+|   |   |   |   |   |   agkffactws >= 0
+|   |   |   |   |   |   |   lon_dd < 0.66 : medium (1/0)
+|   |   |   |   |   |   |   lon_dd >= 0.66 : low (1/0)
+|   |   |   |   |   ntl >= 0.22 : medium (1/0)
+|   |   |   |   ntl >= 0.23
+|   |   |   |   |   atmo_pdep_2002 < -2.01
+|   |   |   |   |   |   bfiws < 0.91 : medium (1/0)
+|   |   |   |   |   |   bfiws >= 0.91 : low (1/0)
+|   |   |   |   |   atmo_pdep_2002 >= -2.01
+|   |   |   |   |   |   bfiws < 0.69
+|   |   |   |   |   |   |   p_crop_removal_2007 < -0.63 : low (6/0)
+|   |   |   |   |   |   |   p_crop_removal_2007 >= -0.63
+|   |   |   |   |   |   |   |   p_crop_removal_2007 < -0.58 : medium (2/0)
+|   |   |   |   |   |   |   |   p_crop_removal_2007 >= -0.58 : low (2/0)
+|   |   |   |   |   |   bfiws >= 0.69
+|   |   |   |   |   |   |   lon_dd < 0.95
+|   |   |   |   |   |   |   |   ptl < 0.27
+|   |   |   |   |   |   |   |   |   atmo_pdep_2002 < -1.6
+|   |   |   |   |   |   |   |   |   |   ntl < 0.4 : low (2/0)
+|   |   |   |   |   |   |   |   |   |   ntl >= 0.4 : medium (1/0)
+|   |   |   |   |   |   |   |   |   atmo_pdep_2002 >= -1.6 : low (8/0)
+|   |   |   |   |   |   |   |   ptl >= 0.27 : low (71/0)
+|   |   |   |   |   |   |   lon_dd >= 0.95 : medium (1/0)
+|   |   |   ntl >= 0.44
+|   |   |   |   ntl < 0.56
+|   |   |   |   |   bfiws < 0.41
+|   |   |   |   |   |   lon_dd < 0.45 : low (1/0)
+|   |   |   |   |   |   lon_dd >= 0.45 : medium (5/0)
+|   |   |   |   |   bfiws >= 0.41
+|   |   |   |   |   |   ptl < 0.33
+|   |   |   |   |   |   |   bfiws < 0.59 : low (9/0)
+|   |   |   |   |   |   |   bfiws >= 0.59
+|   |   |   |   |   |   |   |   bfiws < 0.61 : medium (3/0)
+|   |   |   |   |   |   |   |   bfiws >= 0.61
+|   |   |   |   |   |   |   |   |   ntl < 0.44
+|   |   |   |   |   |   |   |   |   |   ntl < 0.44
+|   |   |   |   |   |   |   |   |   |   |   lon_dd < 0.91 : medium (1/0)
+|   |   |   |   |   |   |   |   |   |   |   lon_dd >= 0.91 : low (1/0)
+|   |   |   |   |   |   |   |   |   |   ntl >= 0.44 : medium (2/0)
+|   |   |   |   |   |   |   |   |   ntl >= 0.44
+|   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 < -1.9 : low (7/0)
+|   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 >= -1.9
+|   |   |   |   |   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 < -0.22
+|   |   |   |   |   |   |   |   |   |   |   |   n_fert_farm_2007 < -0.74
+|   |   |   |   |   |   |   |   |   |   |   |   |   bfiws < 0.76
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   lon_dd < 0.88
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   bfiws < 0.67 : low (1/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   bfiws >= 0.67
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ntl < 0.47
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   lon_dd < 0.76 : low (1/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   lon_dd >= 0.76 : medium (1/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ntl >= 0.47 : medium (4/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   lon_dd >= 0.88 : low (1/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   bfiws >= 0.76
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   agkffactws < 0.05
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 < -0.6
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ptl < 0.28 : low (6/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ptl >= 0.28
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_fert_farm_2007 < -1.05
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ntl < 0.49 : low (5/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ntl >= 0.49
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 < -0.59 : low (5/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 >= -0.59
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ptl < 0.32
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 < -0.44 : medium (2/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 >= -0.44
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   lon_dd < 0.58
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   bfiws < 0.82 : low (4/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   bfiws >= 0.82
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   bfiws < 0.83 : medium (1/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   bfiws >= 0.83
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ptl < 0.3 : medium (1/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ptl >= 0.3 : low (2/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   lon_dd >= 0.58
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   bfiws < 0.81
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ntl < 0.52 : medium (1/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ntl >= 0.52 : low (2/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   bfiws >= 0.81 : medium (4/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ptl >= 0.32 : low (2/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_fert_farm_2007 >= -1.05 : low (6/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 >= -0.6 : medium (1/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   agkffactws >= 0.05 : low (4/0)
+|   |   |   |   |   |   |   |   |   |   |   |   n_fert_farm_2007 >= -0.74 : medium (3/0)
+|   |   |   |   |   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 >= -0.22
+|   |   |   |   |   |   |   |   |   |   |   |   lon_dd < 0.78 : low (18/0)
+|   |   |   |   |   |   |   |   |   |   |   |   lon_dd >= 0.78
+|   |   |   |   |   |   |   |   |   |   |   |   |   bfiws < 0.74 : medium (3/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   bfiws >= 0.74
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 < 0.19 : medium (1/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 >= 0.19 : low (6/0)
+|   |   |   |   |   |   ptl >= 0.33
+|   |   |   |   |   |   |   lon_dd < 0.6
+|   |   |   |   |   |   |   |   ntl < 0.46 : low (6/0)
+|   |   |   |   |   |   |   |   ntl >= 0.46
+|   |   |   |   |   |   |   |   |   bfiws < 0.72 : medium (4/0)
+|   |   |   |   |   |   |   |   |   bfiws >= 0.72
+|   |   |   |   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 < -1.09
+|   |   |   |   |   |   |   |   |   |   |   ntl < 0.51 : low (2/0)
+|   |   |   |   |   |   |   |   |   |   |   ntl >= 0.51 : medium (2/0)
+|   |   |   |   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 >= -1.09 : low (5/0)
+|   |   |   |   |   |   |   lon_dd >= 0.6
+|   |   |   |   |   |   |   |   ptl < 0.34 : medium (7/0)
+|   |   |   |   |   |   |   |   ptl >= 0.34
+|   |   |   |   |   |   |   |   |   ntl < 0.46 : medium (2/0)
+|   |   |   |   |   |   |   |   |   ntl >= 0.46
+|   |   |   |   |   |   |   |   |   |   ntl < 0.5 : low (2/0)
+|   |   |   |   |   |   |   |   |   |   ntl >= 0.5
+|   |   |   |   |   |   |   |   |   |   |   lon_dd < 0.94 : medium (2/0)
+|   |   |   |   |   |   |   |   |   |   |   lon_dd >= 0.94 : low (1/0)
+|   |   |   |   ntl >= 0.56
+|   |   |   |   |   lon_dd < 0.17 : high (1/0)
+|   |   |   |   |   lon_dd >= 0.17
+|   |   |   |   |   |   bfiws < 0.48 : medium (1/0)
+|   |   |   |   |   |   bfiws >= 0.48 : low (7/0)
+|   ptl >= 0.35
+|   |   lon_dd < 0.38
+|   |   |   ptl < 0.47
+|   |   |   |   atmo_pdep_2002 < 0.88
+|   |   |   |   |   ntl < 0.43
+|   |   |   |   |   |   lon_dd < 0.04
+|   |   |   |   |   |   |   ntl < 0.39 : medium (1/0)
+|   |   |   |   |   |   |   ntl >= 0.39 : low (2/0)
+|   |   |   |   |   |   lon_dd >= 0.04 : low (28/0)
+|   |   |   |   |   ntl >= 0.43
+|   |   |   |   |   |   lon_dd < 0.05 : medium (6/0)
+|   |   |   |   |   |   lon_dd >= 0.05
+|   |   |   |   |   |   |   ntl < 0.44 : medium (2/0)
+|   |   |   |   |   |   |   ntl >= 0.44
+|   |   |   |   |   |   |   |   lon_dd < 0.17
+|   |   |   |   |   |   |   |   |   agkffactws < 0
+|   |   |   |   |   |   |   |   |   |   ntl < 0.47 : low (3/0)
+|   |   |   |   |   |   |   |   |   |   ntl >= 0.47
+|   |   |   |   |   |   |   |   |   |   |   lon_dd < 0.1 : low (3/0)
+|   |   |   |   |   |   |   |   |   |   |   lon_dd >= 0.1
+|   |   |   |   |   |   |   |   |   |   |   |   lon_dd < 0.14 : medium (2/0)
+|   |   |   |   |   |   |   |   |   |   |   |   lon_dd >= 0.14 : low (2/0)
+|   |   |   |   |   |   |   |   |   agkffactws >= 0
+|   |   |   |   |   |   |   |   |   |   p_crop_removal_2007 < -0.8 : medium (5/0)
+|   |   |   |   |   |   |   |   |   |   p_crop_removal_2007 >= -0.8
+|   |   |   |   |   |   |   |   |   |   |   ptl < 0.44
+|   |   |   |   |   |   |   |   |   |   |   |   lon_dd < 0.16 : low (3/0)
+|   |   |   |   |   |   |   |   |   |   |   |   lon_dd >= 0.16 : medium (1/0)
+|   |   |   |   |   |   |   |   |   |   |   ptl >= 0.44 : medium (2/0)
+|   |   |   |   |   |   |   |   lon_dd >= 0.17
+|   |   |   |   |   |   |   |   |   n_fert_farm_2007 < -0.62
+|   |   |   |   |   |   |   |   |   |   ptl < 0.41
+|   |   |   |   |   |   |   |   |   |   |   n_fert_farm_2007 < -0.99
+|   |   |   |   |   |   |   |   |   |   |   |   ntl < 0.64
+|   |   |   |   |   |   |   |   |   |   |   |   |   ntl < 0.49
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 < -0.75
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 < 0.29
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ptl < 0.36 : low (1/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ptl >= 0.36 : medium (3/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 >= 0.29 : low (2/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 >= -0.75 : low (2/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   ntl >= 0.49 : low (7/0)
+|   |   |   |   |   |   |   |   |   |   |   |   ntl >= 0.64 : medium (1/0)
+|   |   |   |   |   |   |   |   |   |   |   n_fert_farm_2007 >= -0.99 : medium (2/0)
+|   |   |   |   |   |   |   |   |   |   ptl >= 0.41
+|   |   |   |   |   |   |   |   |   |   |   ptl < 0.44 : low (10/0)
+|   |   |   |   |   |   |   |   |   |   |   ptl >= 0.44
+|   |   |   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 < -1.99 : medium (1/0)
+|   |   |   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 >= -1.99 : low (5/0)
+|   |   |   |   |   |   |   |   |   n_fert_farm_2007 >= -0.62 : low (9/0)
+|   |   |   |   atmo_pdep_2002 >= 0.88
+|   |   |   |   |   atmo_pdep_2002 < 1.09
+|   |   |   |   |   |   ptl < 0.39
+|   |   |   |   |   |   |   atmo_pdep_2002 < 0.99 : low (1/0)
+|   |   |   |   |   |   |   atmo_pdep_2002 >= 0.99 : medium (1/0)
+|   |   |   |   |   |   ptl >= 0.39 : medium (3/0)
+|   |   |   |   |   atmo_pdep_2002 >= 1.09 : low (1/0)
+|   |   |   ptl >= 0.47
+|   |   |   |   ntl < 0.57
+|   |   |   |   |   ntl < 0.46
+|   |   |   |   |   |   n_fert_farm_2007 < -0.72 : low (8/0)
+|   |   |   |   |   |   n_fert_farm_2007 >= -0.72
+|   |   |   |   |   |   |   lon_dd < 0.16 : low (1/0)
+|   |   |   |   |   |   |   lon_dd >= 0.16 : medium (1/0)
+|   |   |   |   |   ntl >= 0.46
+|   |   |   |   |   |   agkffactws < 0.08
+|   |   |   |   |   |   |   atmo_pdep_2002 < -0.86
+|   |   |   |   |   |   |   |   ntl < 0.5
+|   |   |   |   |   |   |   |   |   lon_dd < 0.11 : low (2/0)
+|   |   |   |   |   |   |   |   |   lon_dd >= 0.11
+|   |   |   |   |   |   |   |   |   |   n_fert_farm_2007 < -0.53 : medium (6/0)
+|   |   |   |   |   |   |   |   |   |   n_fert_farm_2007 >= -0.53 : low (1/0)
+|   |   |   |   |   |   |   |   ntl >= 0.5
+|   |   |   |   |   |   |   |   |   ptl < 0.55
+|   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 < -1.46
+|   |   |   |   |   |   |   |   |   |   |   lon_dd < 0.15 : low (1/0)
+|   |   |   |   |   |   |   |   |   |   |   lon_dd >= 0.15 : medium (2/0)
+|   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 >= -1.46 : low (3/0)
+|   |   |   |   |   |   |   |   |   ptl >= 0.55 : low (10/0)
+|   |   |   |   |   |   |   atmo_pdep_2002 >= -0.86
+|   |   |   |   |   |   |   |   atmo_pdep_2002 < -0.22 : medium (6/0)
+|   |   |   |   |   |   |   |   atmo_pdep_2002 >= -0.22
+|   |   |   |   |   |   |   |   |   agkffactws < 0
+|   |   |   |   |   |   |   |   |   |   ptl < 0.5
+|   |   |   |   |   |   |   |   |   |   |   lon_dd < 0.24 : medium (1/0)
+|   |   |   |   |   |   |   |   |   |   |   lon_dd >= 0.24 : low (1/0)
+|   |   |   |   |   |   |   |   |   |   ptl >= 0.5 : medium (6/0)
+|   |   |   |   |   |   |   |   |   agkffactws >= 0
+|   |   |   |   |   |   |   |   |   |   ntl < 0.53 : low (4/0)
+|   |   |   |   |   |   |   |   |   |   ntl >= 0.53 : medium (1/0)
+|   |   |   |   |   |   agkffactws >= 0.08 : medium (4/0)
+|   |   |   |   ntl >= 0.57
+|   |   |   |   |   bfiws < 0.83
+|   |   |   |   |   |   agkffactws < 0
+|   |   |   |   |   |   |   ptl < 0.64 : medium (12/0)
+|   |   |   |   |   |   |   ptl >= 0.64
+|   |   |   |   |   |   |   |   bfiws < 0.6 : medium (2/0)
+|   |   |   |   |   |   |   |   bfiws >= 0.6 : high (2/0)
+|   |   |   |   |   |   agkffactws >= 0
+|   |   |   |   |   |   |   agkffactws < 0 : high (3/0)
+|   |   |   |   |   |   |   agkffactws >= 0
+|   |   |   |   |   |   |   |   bfiws < 0.63 : medium (5/0)
+|   |   |   |   |   |   |   |   bfiws >= 0.63
+|   |   |   |   |   |   |   |   |   lon_dd < 0.28
+|   |   |   |   |   |   |   |   |   |   ntl < 0.69
+|   |   |   |   |   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 < -0.43 : medium (4/0)
+|   |   |   |   |   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 >= -0.43 : high (1/0)
+|   |   |   |   |   |   |   |   |   |   ntl >= 0.69 : high (2/0)
+|   |   |   |   |   |   |   |   |   lon_dd >= 0.28 : high (3/0)
+|   |   |   |   |   bfiws >= 0.83
+|   |   |   |   |   |   lon_dd < 0.09 : low (5/0)
+|   |   |   |   |   |   lon_dd >= 0.09
+|   |   |   |   |   |   |   ntl < 0.71
+|   |   |   |   |   |   |   |   ptl < 0.84
+|   |   |   |   |   |   |   |   |   atmo_pdep_2002 < -0.75
+|   |   |   |   |   |   |   |   |   |   ntl < 0.6 : medium (4/0)
+|   |   |   |   |   |   |   |   |   |   ntl >= 0.6
+|   |   |   |   |   |   |   |   |   |   |   ntl < 0.61
+|   |   |   |   |   |   |   |   |   |   |   |   n_fert_farm_2007 < -0.8 : low (2/0)
+|   |   |   |   |   |   |   |   |   |   |   |   n_fert_farm_2007 >= -0.8 : medium (1/0)
+|   |   |   |   |   |   |   |   |   |   |   ntl >= 0.61 : medium (2/0)
+|   |   |   |   |   |   |   |   |   atmo_pdep_2002 >= -0.75 : medium (9/0)
+|   |   |   |   |   |   |   |   ptl >= 0.84 : low (2/0)
+|   |   |   |   |   |   |   ntl >= 0.71
+|   |   |   |   |   |   |   |   atmo_pdep_2002 < -0.94 : medium (1/0)
+|   |   |   |   |   |   |   |   atmo_pdep_2002 >= -0.94 : high (2/0)
+|   |   lon_dd >= 0.38
+|   |   |   ntl < 0.56
+|   |   |   |   ntl < 0.52
+|   |   |   |   |   p_crop_removal_2007 < -0.72
+|   |   |   |   |   |   bfiws < 0.75
+|   |   |   |   |   |   |   lon_dd < 0.48 : low (4/0)
+|   |   |   |   |   |   |   lon_dd >= 0.48
+|   |   |   |   |   |   |   |   ptl < 0.38
+|   |   |   |   |   |   |   |   |   atmo_pdep_2002 < 1.27
+|   |   |   |   |   |   |   |   |   |   lon_dd < 0.63 : low (2/0)
+|   |   |   |   |   |   |   |   |   |   lon_dd >= 0.63
+|   |   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 < -0.16 : low (1/0)
+|   |   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 >= -0.16 : medium (2/0)
+|   |   |   |   |   |   |   |   |   atmo_pdep_2002 >= 1.27 : medium (2/0)
+|   |   |   |   |   |   |   |   ptl >= 0.38 : medium (14/0)
+|   |   |   |   |   |   bfiws >= 0.75
+|   |   |   |   |   |   |   agkffactws < 0
+|   |   |   |   |   |   |   |   bfiws < 0.89 : low (3/0)
+|   |   |   |   |   |   |   |   bfiws >= 0.89
+|   |   |   |   |   |   |   |   |   ptl < 0.48
+|   |   |   |   |   |   |   |   |   |   lon_dd < 0.8 : low (2/0)
+|   |   |   |   |   |   |   |   |   |   lon_dd >= 0.8 : medium (1/0)
+|   |   |   |   |   |   |   |   |   ptl >= 0.48 : medium (3/0)
+|   |   |   |   |   |   |   agkffactws >= 0 : low (7/0)
+|   |   |   |   |   p_crop_removal_2007 >= -0.72
+|   |   |   |   |   |   ptl < 0.38
+|   |   |   |   |   |   |   ntl < 0.51
+|   |   |   |   |   |   |   |   atmo_pdep_2002 < -0.11 : low (3/0)
+|   |   |   |   |   |   |   |   atmo_pdep_2002 >= -0.11
+|   |   |   |   |   |   |   |   |   ntl < 0.47
+|   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 < 0.46 : medium (1/0)
+|   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 >= 0.46 : low (3/0)
+|   |   |   |   |   |   |   |   |   ntl >= 0.47 : medium (3/0)
+|   |   |   |   |   |   |   ntl >= 0.51 : medium (3/0)
+|   |   |   |   |   |   ptl >= 0.38 : medium (16/0)
+|   |   |   |   ntl >= 0.52
+|   |   |   |   |   ntl < 0.55 : medium (41/0)
+|   |   |   |   |   ntl >= 0.55
+|   |   |   |   |   |   ntl < 0.56 : low (2/0)
+|   |   |   |   |   |   ntl >= 0.56 : medium (3/0)
+|   |   |   ntl >= 0.56
+|   |   |   |   bfiws < 0.87
+|   |   |   |   |   lon_dd < 0.48
+|   |   |   |   |   |   lon_dd < 0.42
+|   |   |   |   |   |   |   ntl < 0.72 : low (2/0)
+|   |   |   |   |   |   |   ntl >= 0.72 : high (1/0)
+|   |   |   |   |   |   lon_dd >= 0.42
+|   |   |   |   |   |   |   ntl < 0.6
+|   |   |   |   |   |   |   |   ntl < 0.57 : medium (1/0)
+|   |   |   |   |   |   |   |   ntl >= 0.57 : low (2/0)
+|   |   |   |   |   |   |   ntl >= 0.6
+|   |   |   |   |   |   |   |   ptl < 0.49
+|   |   |   |   |   |   |   |   |   ptl < 0.44 : medium (1/0)
+|   |   |   |   |   |   |   |   |   ptl >= 0.44 : low (1/0)
+|   |   |   |   |   |   |   |   ptl >= 0.49 : medium (6/0)
+|   |   |   |   |   lon_dd >= 0.48
+|   |   |   |   |   |   bfiws < 0.79
+|   |   |   |   |   |   |   n_fert_farm_2007 < -0.16
+|   |   |   |   |   |   |   |   ntl < 0.57
+|   |   |   |   |   |   |   |   |   ptl < 0.46 : medium (1/0)
+|   |   |   |   |   |   |   |   |   ptl >= 0.46 : high (3/0)
+|   |   |   |   |   |   |   |   ntl >= 0.57
+|   |   |   |   |   |   |   |   |   ntl < 0.61 : medium (7/0)
+|   |   |   |   |   |   |   |   |   ntl >= 0.61
+|   |   |   |   |   |   |   |   |   |   lon_dd < 0.76
+|   |   |   |   |   |   |   |   |   |   |   ntl < 0.72 : medium (6/0)
+|   |   |   |   |   |   |   |   |   |   |   ntl >= 0.72 : high (1/0)
+|   |   |   |   |   |   |   |   |   |   lon_dd >= 0.76 : high (3/0)
+|   |   |   |   |   |   |   n_fert_farm_2007 >= -0.16 : high (2/0)
+|   |   |   |   |   |   bfiws >= 0.79
+|   |   |   |   |   |   |   ptl < 0.38
+|   |   |   |   |   |   |   |   atmo_pdep_2002 < -0.16 : low (1/0)
+|   |   |   |   |   |   |   |   atmo_pdep_2002 >= -0.16 : medium (2/0)
+|   |   |   |   |   |   |   ptl >= 0.38 : medium (6/0)
+|   |   |   |   bfiws >= 0.87
+|   |   |   |   |   lon_dd < 0.57
+|   |   |   |   |   |   ptl < 0.78
+|   |   |   |   |   |   |   ptl < 0.74
+|   |   |   |   |   |   |   |   bfiws < 0.94 : high (3/0)
+|   |   |   |   |   |   |   |   bfiws >= 0.94
+|   |   |   |   |   |   |   |   |   lon_dd < 0.39 : medium (3/0)
+|   |   |   |   |   |   |   |   |   lon_dd >= 0.39
+|   |   |   |   |   |   |   |   |   |   ptl < 0.62 : medium (2/0)
+|   |   |   |   |   |   |   |   |   |   ptl >= 0.62
+|   |   |   |   |   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 < -0.97
+|   |   |   |   |   |   |   |   |   |   |   |   ntl < 0.73 : medium (2/0)
+|   |   |   |   |   |   |   |   |   |   |   |   ntl >= 0.73
+|   |   |   |   |   |   |   |   |   |   |   |   |   lon_dd < 0.44 : high (6/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   lon_dd >= 0.44
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ptl < 0.65 : high (1/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ptl >= 0.65 : medium (1/0)
+|   |   |   |   |   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 >= -0.97 : high (3/0)
+|   |   |   |   |   |   |   ptl >= 0.74
+|   |   |   |   |   |   |   |   ptl < 0.75 : low (1/0)
+|   |   |   |   |   |   |   |   ptl >= 0.75
+|   |   |   |   |   |   |   |   |   ntl < 0.79 : high (1/0)
+|   |   |   |   |   |   |   |   |   ntl >= 0.79 : medium (1/0)
+|   |   |   |   |   |   ptl >= 0.78 : high (6/0)
+|   |   |   |   |   lon_dd >= 0.57 : low (1/0)
+n_fert_farm_2007 >= -0.08
+|   lon_dd < 0.34
+|   |   ntl < 0.69
+|   |   |   n_fert_farm_2007 < -0.01 : medium (4/0)
+|   |   |   n_fert_farm_2007 >= -0.01
+|   |   |   |   atmo_pdep_2002 < -0.21
+|   |   |   |   |   ptl < 0.39
+|   |   |   |   |   |   p_crop_removal_2007 < 0.49 : low (14/0)
+|   |   |   |   |   |   p_crop_removal_2007 >= 0.49
+|   |   |   |   |   |   |   p_crop_removal_2007 < 0.64 : medium (2/0)
+|   |   |   |   |   |   |   p_crop_removal_2007 >= 0.64
+|   |   |   |   |   |   |   |   ntl < 0.54 : low (6/0)
+|   |   |   |   |   |   |   |   ntl >= 0.54
+|   |   |   |   |   |   |   |   |   ptl < 0.26 : medium (1/0)
+|   |   |   |   |   |   |   |   |   ptl >= 0.26 : low (1/0)
+|   |   |   |   |   ptl >= 0.39
+|   |   |   |   |   |   agkffactws < 0.2
+|   |   |   |   |   |   |   p_crop_removal_2007 < -0.63
+|   |   |   |   |   |   |   |   atmo_pdep_2002 < -0.5 : medium (1/0)
+|   |   |   |   |   |   |   |   atmo_pdep_2002 >= -0.5 : low (2/0)
+|   |   |   |   |   |   |   p_crop_removal_2007 >= -0.63 : medium (7/0)
+|   |   |   |   |   |   agkffactws >= 0.2
+|   |   |   |   |   |   |   lon_dd < 0.06 : medium (1/0)
+|   |   |   |   |   |   |   lon_dd >= 0.06
+|   |   |   |   |   |   |   |   atmo_pdep_2002 < -1.98
+|   |   |   |   |   |   |   |   |   lon_dd < 0.24 : medium (1/0)
+|   |   |   |   |   |   |   |   |   lon_dd >= 0.24
+|   |   |   |   |   |   |   |   |   |   lon_dd < 0.31 : low (2/0)
+|   |   |   |   |   |   |   |   |   |   lon_dd >= 0.31 : medium (1/0)
+|   |   |   |   |   |   |   |   atmo_pdep_2002 >= -1.98 : low (4/0)
+|   |   |   |   atmo_pdep_2002 >= -0.21
+|   |   |   |   |   agkffactws < 0.06
+|   |   |   |   |   |   ntl < 0.49 : low (1/0)
+|   |   |   |   |   |   ntl >= 0.49 : medium (1/0)
+|   |   |   |   |   agkffactws >= 0.06 : low (11/0)
+|   |   ntl >= 0.69
+|   |   |   lon_dd < 0.26
+|   |   |   |   lon_dd < 0.23 : high (1/0)
+|   |   |   |   lon_dd >= 0.23
+|   |   |   |   |   ntl < 0.7 : high (1/0)
+|   |   |   |   |   ntl >= 0.7 : medium (2/0)
+|   |   |   lon_dd >= 0.26 : low (2/0)
+|   lon_dd >= 0.34
+|   |   ptl < 0.32
+|   |   |   bfiws < 0.67
+|   |   |   |   p_accumulated_ag_inputs_2007 < 0.81
+|   |   |   |   |   agkffactws < 0.17
+|   |   |   |   |   |   agkffactws < 0.14
+|   |   |   |   |   |   |   ntl < 0.49 : low (9/0)
+|   |   |   |   |   |   |   ntl >= 0.49
+|   |   |   |   |   |   |   |   n_fert_farm_2007 < 0.19 : medium (2/0)
+|   |   |   |   |   |   |   |   n_fert_farm_2007 >= 0.19 : low (2/0)
+|   |   |   |   |   |   agkffactws >= 0.14 : medium (2/0)
+|   |   |   |   |   agkffactws >= 0.17
+|   |   |   |   |   |   ntl < 0.42
+|   |   |   |   |   |   |   lon_dd < 0.63 : high (1/0)
+|   |   |   |   |   |   |   lon_dd >= 0.63 : low (2/0)
+|   |   |   |   |   |   ntl >= 0.42 : low (8/0)
+|   |   |   |   p_accumulated_ag_inputs_2007 >= 0.81
+|   |   |   |   |   n_fert_farm_2007 < 1.05
+|   |   |   |   |   |   ptl < 0.2
+|   |   |   |   |   |   |   lon_dd < 0.73 : low (2/0)
+|   |   |   |   |   |   |   lon_dd >= 0.73 : medium (2/0)
+|   |   |   |   |   |   ptl >= 0.2
+|   |   |   |   |   |   |   bfiws < 0.4
+|   |   |   |   |   |   |   |   lon_dd < 0.49 : high (1/0)
+|   |   |   |   |   |   |   |   lon_dd >= 0.49 : medium (1/0)
+|   |   |   |   |   |   |   bfiws >= 0.4 : medium (7/0)
+|   |   |   |   |   n_fert_farm_2007 >= 1.05
+|   |   |   |   |   |   p_crop_removal_2007 < 1.91
+|   |   |   |   |   |   |   lon_dd < 0.5 : medium (1/0)
+|   |   |   |   |   |   |   lon_dd >= 0.5 : low (10/0)
+|   |   |   |   |   |   p_crop_removal_2007 >= 1.91
+|   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 < 1.43 : medium (2/0)
+|   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 >= 1.43 : low (1/0)
+|   |   |   bfiws >= 0.67
+|   |   |   |   p_crop_removal_2007 < -0.34
+|   |   |   |   |   atmo_pdep_2002 < 0.43 : low (4/0)
+|   |   |   |   |   atmo_pdep_2002 >= 0.43
+|   |   |   |   |   |   bfiws < 0.69 : low (1/0)
+|   |   |   |   |   |   bfiws >= 0.69 : medium (5/0)
+|   |   |   |   p_crop_removal_2007 >= -0.34
+|   |   |   |   |   ptl < 0.29
+|   |   |   |   |   |   agkffactws < 0.01
+|   |   |   |   |   |   |   lon_dd < 0.52 : medium (1/0)
+|   |   |   |   |   |   |   lon_dd >= 0.52 : low (1/0)
+|   |   |   |   |   |   agkffactws >= 0.01
+|   |   |   |   |   |   |   n_fert_farm_2007 < 1.07 : low (65/0)
+|   |   |   |   |   |   |   n_fert_farm_2007 >= 1.07
+|   |   |   |   |   |   |   |   p_crop_removal_2007 < 0.61
+|   |   |   |   |   |   |   |   |   ptl < 0.25 : medium (2/0)
+|   |   |   |   |   |   |   |   |   ptl >= 0.25 : low (1/0)
+|   |   |   |   |   |   |   |   p_crop_removal_2007 >= 0.61
+|   |   |   |   |   |   |   |   |   atmo_pdep_2002 < 0.19
+|   |   |   |   |   |   |   |   |   |   ntl < 0.52 : low (6/0)
+|   |   |   |   |   |   |   |   |   |   ntl >= 0.52
+|   |   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 < -0.64 : low (1/0)
+|   |   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 >= -0.64 : medium (2/0)
+|   |   |   |   |   |   |   |   |   atmo_pdep_2002 >= 0.19 : low (28/0)
+|   |   |   |   |   ptl >= 0.29
+|   |   |   |   |   |   bfiws < 0.79 : low (8/0)
+|   |   |   |   |   |   bfiws >= 0.79
+|   |   |   |   |   |   |   ntl < 0.43 : medium (2/0)
+|   |   |   |   |   |   |   ntl >= 0.43
+|   |   |   |   |   |   |   |   lon_dd < 0.68 : low (7/0)
+|   |   |   |   |   |   |   |   lon_dd >= 0.68
+|   |   |   |   |   |   |   |   |   lon_dd < 0.69 : medium (2/0)
+|   |   |   |   |   |   |   |   |   lon_dd >= 0.69
+|   |   |   |   |   |   |   |   |   |   n_fert_farm_2007 < 0.68 : low (4/0)
+|   |   |   |   |   |   |   |   |   |   n_fert_farm_2007 >= 0.68
+|   |   |   |   |   |   |   |   |   |   |   bfiws < 0.83 : medium (2/0)
+|   |   |   |   |   |   |   |   |   |   |   bfiws >= 0.83 : low (2/0)
+|   |   ptl >= 0.32
+|   |   |   ptl < 0.55
+|   |   |   |   p_accumulated_ag_inputs_2007 < 0.75
+|   |   |   |   |   p_accumulated_ag_inputs_2007 < 0.73
+|   |   |   |   |   |   ntl < 0.45
+|   |   |   |   |   |   |   n_fert_farm_2007 < -0.02 : medium (2/0)
+|   |   |   |   |   |   |   n_fert_farm_2007 >= -0.02
+|   |   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 < 0.67 : low (7/0)
+|   |   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 >= 0.67
+|   |   |   |   |   |   |   |   |   p_crop_removal_2007 < -0.15 : low (1/0)
+|   |   |   |   |   |   |   |   |   p_crop_removal_2007 >= -0.15 : medium (2/0)
+|   |   |   |   |   |   ntl >= 0.45
+|   |   |   |   |   |   |   agkffactws < 0.17
+|   |   |   |   |   |   |   |   ptl < 0.33 : low (2/0)
+|   |   |   |   |   |   |   |   ptl >= 0.33
+|   |   |   |   |   |   |   |   |   n_fert_farm_2007 < 0.66
+|   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 < 1.1
+|   |   |   |   |   |   |   |   |   |   |   ntl < 0.47 : low (1/0)
+|   |   |   |   |   |   |   |   |   |   |   ntl >= 0.47
+|   |   |   |   |   |   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 < -0.01
+|   |   |   |   |   |   |   |   |   |   |   |   |   ptl < 0.37 : medium (1/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   ptl >= 0.37 : low (5/0)
+|   |   |   |   |   |   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 >= -0.01
+|   |   |   |   |   |   |   |   |   |   |   |   |   bfiws < 0.58
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ptl < 0.43
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 < 0.06 : low (2/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 >= 0.06
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ntl < 0.5 : low (1/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ntl >= 0.5 : medium (4/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ptl >= 0.43 : medium (13/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   bfiws >= 0.58 : medium (29/0)
+|   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 >= 1.1
+|   |   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 < 1.24
+|   |   |   |   |   |   |   |   |   |   |   |   lon_dd < 0.67 : low (2/0)
+|   |   |   |   |   |   |   |   |   |   |   |   lon_dd >= 0.67 : high (1/0)
+|   |   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 >= 1.24
+|   |   |   |   |   |   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 < 0.35
+|   |   |   |   |   |   |   |   |   |   |   |   |   ntl < 0.65 : medium (2/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   ntl >= 0.65 : low (1/0)
+|   |   |   |   |   |   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 >= 0.35 : medium (4/0)
+|   |   |   |   |   |   |   |   |   n_fert_farm_2007 >= 0.66 : medium (19/0)
+|   |   |   |   |   |   |   agkffactws >= 0.17
+|   |   |   |   |   |   |   |   ptl < 0.48
+|   |   |   |   |   |   |   |   |   ntl < 0.57
+|   |   |   |   |   |   |   |   |   |   bfiws < 0.57 : medium (7/0)
+|   |   |   |   |   |   |   |   |   |   bfiws >= 0.57
+|   |   |   |   |   |   |   |   |   |   |   ntl < 0.53 : low (3/0)
+|   |   |   |   |   |   |   |   |   |   |   ntl >= 0.53 : medium (2/0)
+|   |   |   |   |   |   |   |   |   ntl >= 0.57
+|   |   |   |   |   |   |   |   |   |   bfiws < 0.52
+|   |   |   |   |   |   |   |   |   |   |   lon_dd < 0.39 : medium (2/0)
+|   |   |   |   |   |   |   |   |   |   |   lon_dd >= 0.39
+|   |   |   |   |   |   |   |   |   |   |   |   lon_dd < 0.46 : low (5/0)
+|   |   |   |   |   |   |   |   |   |   |   |   lon_dd >= 0.46 : medium (1/0)
+|   |   |   |   |   |   |   |   |   |   bfiws >= 0.52 : low (9/0)
+|   |   |   |   |   |   |   |   ptl >= 0.48
+|   |   |   |   |   |   |   |   |   atmo_pdep_2002 < -0.84
+|   |   |   |   |   |   |   |   |   |   n_fert_farm_2007 < 1.02
+|   |   |   |   |   |   |   |   |   |   |   ptl < 0.5 : medium (1/0)
+|   |   |   |   |   |   |   |   |   |   |   ptl >= 0.5 : low (2/0)
+|   |   |   |   |   |   |   |   |   |   n_fert_farm_2007 >= 1.02 : medium (2/0)
+|   |   |   |   |   |   |   |   |   atmo_pdep_2002 >= -0.84 : medium (12/0)
+|   |   |   |   |   p_accumulated_ag_inputs_2007 >= 0.73
+|   |   |   |   |   |   ptl < 0.47 : low (6/0)
+|   |   |   |   |   |   ptl >= 0.47 : medium (1/0)
+|   |   |   |   p_accumulated_ag_inputs_2007 >= 0.75
+|   |   |   |   |   n_fert_farm_2007 < 1.36
+|   |   |   |   |   |   n_fert_farm_2007 < 1.32
+|   |   |   |   |   |   |   ptl < 0.48
+|   |   |   |   |   |   |   |   ntl < 0.7
+|   |   |   |   |   |   |   |   |   p_crop_removal_2007 < 0.32 : medium (45/0)
+|   |   |   |   |   |   |   |   |   p_crop_removal_2007 >= 0.32
+|   |   |   |   |   |   |   |   |   |   ntl < 0.56
+|   |   |   |   |   |   |   |   |   |   |   agkffactws < 0.33
+|   |   |   |   |   |   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 < 1.06
+|   |   |   |   |   |   |   |   |   |   |   |   |   bfiws < 0.78
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   bfiws < 0.71
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   lon_dd < 0.45 : low (1/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   lon_dd >= 0.45
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   agkffactws < 0.29 : medium (5/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   agkffactws >= 0.29
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 < 1.9 : low (2/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 >= 1.9 : medium (1/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   bfiws >= 0.71 : medium (7/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   bfiws >= 0.78
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ntl < 0.54 : low (7/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ntl >= 0.54
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_fert_farm_2007 < 1.2 : low (1/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_fert_farm_2007 >= 1.2 : medium (2/0)
+|   |   |   |   |   |   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 >= 1.06 : medium (11/0)
+|   |   |   |   |   |   |   |   |   |   |   agkffactws >= 0.33
+|   |   |   |   |   |   |   |   |   |   |   |   ptl < 0.39
+|   |   |   |   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 < 0.13 : low (1/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 >= 0.13
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 < 1.64 : medium (14/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 >= 1.64 : low (1/0)
+|   |   |   |   |   |   |   |   |   |   |   |   ptl >= 0.39 : medium (27/0)
+|   |   |   |   |   |   |   |   |   |   ntl >= 0.56 : medium (28/0)
+|   |   |   |   |   |   |   |   ntl >= 0.7
+|   |   |   |   |   |   |   |   |   ntl < 0.71 : high (1/0)
+|   |   |   |   |   |   |   |   |   ntl >= 0.71 : low (1/0)
+|   |   |   |   |   |   |   ptl >= 0.48
+|   |   |   |   |   |   |   |   n_fert_farm_2007 < 1.06
+|   |   |   |   |   |   |   |   |   bfiws < 0.66
+|   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 < 0.26 : high (1/0)
+|   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 >= 0.26
+|   |   |   |   |   |   |   |   |   |   |   agkffactws < 0.37 : medium (11/0)
+|   |   |   |   |   |   |   |   |   |   |   agkffactws >= 0.37
+|   |   |   |   |   |   |   |   |   |   |   |   bfiws < 0.41 : medium (4/0)
+|   |   |   |   |   |   |   |   |   |   |   |   bfiws >= 0.41
+|   |   |   |   |   |   |   |   |   |   |   |   |   n_fert_farm_2007 < 0.61 : medium (1/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   n_fert_farm_2007 >= 0.61
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ptl < 0.49 : medium (1/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ptl >= 0.49 : low (2/0)
+|   |   |   |   |   |   |   |   |   bfiws >= 0.66
+|   |   |   |   |   |   |   |   |   |   bfiws < 0.76
+|   |   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 < 0.59
+|   |   |   |   |   |   |   |   |   |   |   |   ntl < 0.64 : medium (2/0)
+|   |   |   |   |   |   |   |   |   |   |   |   ntl >= 0.64 : high (1/0)
+|   |   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 >= 0.59 : high (3/0)
+|   |   |   |   |   |   |   |   |   |   bfiws >= 0.76 : medium (9/0)
+|   |   |   |   |   |   |   |   n_fert_farm_2007 >= 1.06 : medium (29/0)
+|   |   |   |   |   |   n_fert_farm_2007 >= 1.32
+|   |   |   |   |   |   |   ptl < 0.46 : medium (8/0)
+|   |   |   |   |   |   |   ptl >= 0.46
+|   |   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 < 1.26
+|   |   |   |   |   |   |   |   |   atmo_pdep_2002 < 0.24 : medium (2/0)
+|   |   |   |   |   |   |   |   |   atmo_pdep_2002 >= 0.24 : high (1/0)
+|   |   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 >= 1.26 : high (3/0)
+|   |   |   |   |   n_fert_farm_2007 >= 1.36
+|   |   |   |   |   |   ptl < 0.36
+|   |   |   |   |   |   |   lon_dd < 0.68
+|   |   |   |   |   |   |   |   ptl < 0.33 : low (2/0)
+|   |   |   |   |   |   |   |   ptl >= 0.33
+|   |   |   |   |   |   |   |   |   ntl < 0.51
+|   |   |   |   |   |   |   |   |   |   agkffactws < 0.64 : low (3/0)
+|   |   |   |   |   |   |   |   |   |   agkffactws >= 0.64 : medium (2/0)
+|   |   |   |   |   |   |   |   |   ntl >= 0.51 : medium (4/0)
+|   |   |   |   |   |   |   lon_dd >= 0.68 : low (6/0)
+|   |   |   |   |   |   ptl >= 0.36
+|   |   |   |   |   |   |   agkffactws < 0.5
+|   |   |   |   |   |   |   |   ntl < 0.54
+|   |   |   |   |   |   |   |   |   atmo_pdep_2002 < 0.26 : low (4/0)
+|   |   |   |   |   |   |   |   |   atmo_pdep_2002 >= 0.26
+|   |   |   |   |   |   |   |   |   |   lon_dd < 0.67 : medium (3/0)
+|   |   |   |   |   |   |   |   |   |   lon_dd >= 0.67
+|   |   |   |   |   |   |   |   |   |   |   lon_dd < 0.71 : low (1/0)
+|   |   |   |   |   |   |   |   |   |   |   lon_dd >= 0.71 : medium (1/0)
+|   |   |   |   |   |   |   |   ntl >= 0.54
+|   |   |   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 < 1.13
+|   |   |   |   |   |   |   |   |   |   lon_dd < 0.51
+|   |   |   |   |   |   |   |   |   |   |   p_crop_removal_2007 < 1.72 : medium (2/0)
+|   |   |   |   |   |   |   |   |   |   |   p_crop_removal_2007 >= 1.72 : low (3/0)
+|   |   |   |   |   |   |   |   |   |   lon_dd >= 0.51
+|   |   |   |   |   |   |   |   |   |   |   lon_dd < 0.68 : medium (8/0)
+|   |   |   |   |   |   |   |   |   |   |   lon_dd >= 0.68 : low (1/0)
+|   |   |   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 >= 1.13 : medium (17/0)
+|   |   |   |   |   |   |   agkffactws >= 0.5 : medium (39/0)
+|   |   |   ptl >= 0.55
+|   |   |   |   ntl < 0.64
+|   |   |   |   |   agkffactws < 0.55
+|   |   |   |   |   |   lon_dd < 0.57
+|   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 < 0.72
+|   |   |   |   |   |   |   |   n_fert_farm_2007 < 0.41 : medium (4/0)
+|   |   |   |   |   |   |   |   n_fert_farm_2007 >= 0.41
+|   |   |   |   |   |   |   |   |   ptl < 0.57
+|   |   |   |   |   |   |   |   |   |   ptl < 0.56 : low (3/0)
+|   |   |   |   |   |   |   |   |   |   ptl >= 0.56
+|   |   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 < -0.22 : low (1/0)
+|   |   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 >= -0.22 : medium (2/0)
+|   |   |   |   |   |   |   |   |   ptl >= 0.57 : low (9/0)
+|   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 >= 0.72
+|   |   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 < 1.11
+|   |   |   |   |   |   |   |   |   n_fert_farm_2007 < 1.53
+|   |   |   |   |   |   |   |   |   |   n_fert_farm_2007 < 1.29
+|   |   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 < -0.7 : low (2/0)
+|   |   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 >= -0.7
+|   |   |   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 < 0.95
+|   |   |   |   |   |   |   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 < 0.94 : medium (13/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 >= 0.94 : low (1/0)
+|   |   |   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 >= 0.95
+|   |   |   |   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 < 1.2 : low (2/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   atmo_pdep_2002 >= 1.2 : medium (1/0)
+|   |   |   |   |   |   |   |   |   |   n_fert_farm_2007 >= 1.29 : medium (7/0)
+|   |   |   |   |   |   |   |   |   n_fert_farm_2007 >= 1.53
+|   |   |   |   |   |   |   |   |   |   p_crop_removal_2007 < 1.86
+|   |   |   |   |   |   |   |   |   |   |   lon_dd < 0.48 : low (2/0)
+|   |   |   |   |   |   |   |   |   |   |   lon_dd >= 0.48 : high (1/0)
+|   |   |   |   |   |   |   |   |   |   p_crop_removal_2007 >= 1.86 : medium (2/0)
+|   |   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 >= 1.11
+|   |   |   |   |   |   |   |   |   lon_dd < 0.49
+|   |   |   |   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 < 1.19 : high (2/0)
+|   |   |   |   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 >= 1.19 : medium (1/0)
+|   |   |   |   |   |   |   |   |   lon_dd >= 0.49 : medium (4/0)
+|   |   |   |   |   |   lon_dd >= 0.57
+|   |   |   |   |   |   |   lon_dd < 0.77 : medium (12/0)
+|   |   |   |   |   |   |   lon_dd >= 0.77
+|   |   |   |   |   |   |   |   lon_dd < 0.79 : high (2/0)
+|   |   |   |   |   |   |   |   lon_dd >= 0.79 : medium (2/0)
+|   |   |   |   |   agkffactws >= 0.55
+|   |   |   |   |   |   p_accumulated_ag_inputs_2007 < 0.99 : medium (14/0)
+|   |   |   |   |   |   p_accumulated_ag_inputs_2007 >= 0.99
+|   |   |   |   |   |   |   ptl < 0.62
+|   |   |   |   |   |   |   |   n_fert_farm_2007 < 1.36
+|   |   |   |   |   |   |   |   |   agkffactws < 0.55 : medium (1/0)
+|   |   |   |   |   |   |   |   |   agkffactws >= 0.55 : high (4/0)
+|   |   |   |   |   |   |   |   n_fert_farm_2007 >= 1.36
+|   |   |   |   |   |   |   |   |   n_fert_farm_2007 < 1.8 : medium (6/0)
+|   |   |   |   |   |   |   |   |   n_fert_farm_2007 >= 1.8
+|   |   |   |   |   |   |   |   |   |   lon_dd < 0.52 : high (1/0)
+|   |   |   |   |   |   |   |   |   |   lon_dd >= 0.52 : medium (1/0)
+|   |   |   |   |   |   |   ptl >= 0.62 : medium (10/0)
+|   |   |   |   ntl >= 0.64
+|   |   |   |   |   ntl < 0.7
+|   |   |   |   |   |   bfiws < 0.57
+|   |   |   |   |   |   |   ntl < 0.65
+|   |   |   |   |   |   |   |   atmo_pdep_2002 < 0.86
+|   |   |   |   |   |   |   |   |   ntl < 0.65 : low (3/0)
+|   |   |   |   |   |   |   |   |   ntl >= 0.65 : high (4/0)
+|   |   |   |   |   |   |   |   atmo_pdep_2002 >= 0.86 : medium (1/0)
+|   |   |   |   |   |   |   ntl >= 0.65
+|   |   |   |   |   |   |   |   p_crop_removal_2007 < 1.73
+|   |   |   |   |   |   |   |   |   atmo_pdep_2002 < -0.84
+|   |   |   |   |   |   |   |   |   |   ptl < 0.61
+|   |   |   |   |   |   |   |   |   |   |   lon_dd < 0.43 : low (1/0)
+|   |   |   |   |   |   |   |   |   |   |   lon_dd >= 0.43 : medium (4/0)
+|   |   |   |   |   |   |   |   |   |   ptl >= 0.61 : low (3/0)
+|   |   |   |   |   |   |   |   |   atmo_pdep_2002 >= -0.84
+|   |   |   |   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 < 0.87
+|   |   |   |   |   |   |   |   |   |   |   p_crop_removal_2007 < 1.17 : medium (11/0)
+|   |   |   |   |   |   |   |   |   |   |   p_crop_removal_2007 >= 1.17
+|   |   |   |   |   |   |   |   |   |   |   |   n_fert_farm_2007 < 1.15 : low (1/0)
+|   |   |   |   |   |   |   |   |   |   |   |   n_fert_farm_2007 >= 1.15 : medium (4/0)
+|   |   |   |   |   |   |   |   |   |   p_accumulated_ag_inputs_2007 >= 0.87
+|   |   |   |   |   |   |   |   |   |   |   ntl < 0.69 : medium (4/0)
+|   |   |   |   |   |   |   |   |   |   |   ntl >= 0.69 : high (2/0)
+|   |   |   |   |   |   |   |   p_crop_removal_2007 >= 1.73
+|   |   |   |   |   |   |   |   |   ntl < 0.67 : low (2/0)
+|   |   |   |   |   |   |   |   |   ntl >= 0.67 : high (1/0)
+|   |   |   |   |   |   bfiws >= 0.57
+|   |   |   |   |   |   |   n_fert_farm_2007 < 1.88
+|   |   |   |   |   |   |   |   atmo_pdep_2002 < -0.37
+|   |   |   |   |   |   |   |   |   atmo_pdep_2002 < -0.74
+|   |   |   |   |   |   |   |   |   |   bfiws < 0.59 : low (1/0)
+|   |   |   |   |   |   |   |   |   |   bfiws >= 0.59 : medium (4/0)
+|   |   |   |   |   |   |   |   |   atmo_pdep_2002 >= -0.74
+|   |   |   |   |   |   |   |   |   |   lon_dd < 0.51 : high (1/0)
+|   |   |   |   |   |   |   |   |   |   lon_dd >= 0.51 : low (1/0)
+|   |   |   |   |   |   |   |   atmo_pdep_2002 >= -0.37
+|   |   |   |   |   |   |   |   |   lon_dd < 0.85
+|   |   |   |   |   |   |   |   |   |   agkffactws < 0.73
+|   |   |   |   |   |   |   |   |   |   |   ptl < 0.63 : high (15/0)
+|   |   |   |   |   |   |   |   |   |   |   ptl >= 0.63
+|   |   |   |   |   |   |   |   |   |   |   |   ptl < 0.64 : medium (1/0)
+|   |   |   |   |   |   |   |   |   |   |   |   ptl >= 0.64
+|   |   |   |   |   |   |   |   |   |   |   |   |   ptl < 0.72 : high (6/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   ptl >= 0.72
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ptl < 0.73 : medium (1/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ptl >= 0.73 : high (1/0)
+|   |   |   |   |   |   |   |   |   |   agkffactws >= 0.73 : medium (1/0)
+|   |   |   |   |   |   |   |   |   lon_dd >= 0.85
+|   |   |   |   |   |   |   |   |   |   ntl < 0.65 : high (1/0)
+|   |   |   |   |   |   |   |   |   |   ntl >= 0.65 : medium (3/0)
+|   |   |   |   |   |   |   n_fert_farm_2007 >= 1.88 : medium (4/0)
+|   |   |   |   |   ntl >= 0.7
+|   |   |   |   |   |   agkffactws < 0.46
+|   |   |   |   |   |   |   ptl < 0.96
+|   |   |   |   |   |   |   |   ntl < 0.73
+|   |   |   |   |   |   |   |   |   ntl < 0.7 : high (2/0)
+|   |   |   |   |   |   |   |   |   ntl >= 0.7
+|   |   |   |   |   |   |   |   |   |   n_fert_farm_2007 < 1.45
+|   |   |   |   |   |   |   |   |   |   |   n_fert_farm_2007 < 0.62 : medium (2/0)
+|   |   |   |   |   |   |   |   |   |   |   n_fert_farm_2007 >= 0.62
+|   |   |   |   |   |   |   |   |   |   |   |   p_crop_removal_2007 < 0.76 : medium (1/0)
+|   |   |   |   |   |   |   |   |   |   |   |   p_crop_removal_2007 >= 0.76
+|   |   |   |   |   |   |   |   |   |   |   |   |   lon_dd < 0.42
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   lon_dd < 0.41 : high (1/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   lon_dd >= 0.41 : medium (2/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   lon_dd >= 0.42 : high (6/0)
+|   |   |   |   |   |   |   |   |   |   n_fert_farm_2007 >= 1.45 : medium (4/0)
+|   |   |   |   |   |   |   |   ntl >= 0.73
+|   |   |   |   |   |   |   |   |   lon_dd < 0.44
+|   |   |   |   |   |   |   |   |   |   p_crop_removal_2007 < 0.34
+|   |   |   |   |   |   |   |   |   |   |   lon_dd < 0.37 : medium (1/0)
+|   |   |   |   |   |   |   |   |   |   |   lon_dd >= 0.37 : high (2/0)
+|   |   |   |   |   |   |   |   |   |   p_crop_removal_2007 >= 0.34
+|   |   |   |   |   |   |   |   |   |   |   lon_dd < 0.4 : low (1/0)
+|   |   |   |   |   |   |   |   |   |   |   lon_dd >= 0.4 : medium (2/0)
+|   |   |   |   |   |   |   |   |   lon_dd >= 0.44
+|   |   |   |   |   |   |   |   |   |   agkffactws < 0.12
+|   |   |   |   |   |   |   |   |   |   |   n_fert_farm_2007 < 0.78
+|   |   |   |   |   |   |   |   |   |   |   |   lon_dd < 0.45 : high (3/0)
+|   |   |   |   |   |   |   |   |   |   |   |   lon_dd >= 0.45
+|   |   |   |   |   |   |   |   |   |   |   |   |   p_crop_removal_2007 < -0 : high (2/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   p_crop_removal_2007 >= -0 : medium (1/0)
+|   |   |   |   |   |   |   |   |   |   |   n_fert_farm_2007 >= 0.78 : low (1/0)
+|   |   |   |   |   |   |   |   |   |   agkffactws >= 0.12 : high (14/0)
+|   |   |   |   |   |   |   ptl >= 0.96 : low (1/0)
+|   |   |   |   |   |   agkffactws >= 0.46
+|   |   |   |   |   |   |   ptl < 0.61
+|   |   |   |   |   |   |   |   lon_dd < 0.55 : high (1/0)
+|   |   |   |   |   |   |   |   lon_dd >= 0.55 : medium (2/0)
+|   |   |   |   |   |   |   ptl >= 0.61 : high (22/0)
+
+Size of the tree : 821
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        1496               71.374  %
+Incorrectly Classified Instances       600               28.626  %
+Kappa statistic                          0.4921
+Mean absolute error                      0.1908
+Root mean squared error                  0.4369
+Relative absolute error                 51.0489 %
+Root relative squared error            101.0585 %
+Total Number of Instances             2096     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.773    0.225    0.782      0.773    0.777      0.548    0.774     0.720     low
+                 0.670    0.233    0.672      0.670    0.671      0.437    0.719     0.588     medium
+                 0.549    0.043    0.500      0.549    0.523      0.485    0.753     0.307     high
+Weighted Avg.    0.714    0.215    0.716      0.714    0.715      0.497    0.749     0.635     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 827 228  15 |   a = low
+ 219 585  69 |   b = medium
+  12  57  84 |   c = high
+
