@@ -9,4 +9,4 @@ We evaluated our models on the following dataset:
 
 This dataset focuses on characteristics and health metrics of lakes around the United States. We aimed to predict the natural logarithm of the chlorophyll-a class.
 
-This project was co-authored by Nikhil Alladi, Peter Kisslev, and Jacobl Dipasupil.
+This project was co-authored by Nikhil Alladi, Peter Kisslev, and Jacob Dipasupil.
