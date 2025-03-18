@@ -6,6 +6,7 @@ We tested the following attribute selection algorithms: Information Gain, Princi
 We tested the following classification models: Naive Bayes, Logistic Regression, J48 (learner-based), and RandomTree (a variant of the standard decision tree algorithm).
 We evaluated our models on the following dataset: 
 - https://catalog.data.gov/dataset/estimates-of-lake-nitrogen-phosphorus-and-chlorophyll-a-concentrations-to-characterize-har
+
 This dataset focuses on characteristics and health metrics of lakes around the United States. We aimed to predict the natural logarithm of the chlorophyll-a class.
 
-This project was co-authored by Nikhil Alladi
+This project was co-authored by Nikhil Alladi, Peter Kisslev, and Jacobl Dipasupil.
